@@ -20,8 +20,10 @@ export class UserService {
 
         this.users.push(user);
 
-        console.log('passwordHashed', passwordHashed);
-
         return user; 
+    }
+
+    async getAllUser(): Promise<User[]> {
+        return this.users;
     }
 }
