@@ -24,7 +24,7 @@ export class UserEntity {
     typeUser: number;
 
     @CreateDateColumn()
-    createtedAt: Date;
+    createdAt: Date;
 
     @UpdateDateColumn()
     updatedAt: Date;
