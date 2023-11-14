@@ -6,3 +6,10 @@ async function bootstrap() {
   await app.listen(8080);
 }
 bootstrap();
+
+
+
+
+
+
+//inicia um servidor web na porta 8080 usando o módulo principal do NestJS <<<<<<<<<

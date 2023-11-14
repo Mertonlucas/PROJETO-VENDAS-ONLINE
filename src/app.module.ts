@@ -18,6 +18,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       entities: [`${__dirname}/**/*.entity{.js,.ts}`],
       migrations: [`${__dirname}/migrations/{.ts,*.js}`],
       migrationsRun: true,
+      
     }),
     UserModule,
   ],
@@ -25,3 +26,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   providers: [],
 })
 export class AppModule {}
+
+
+//define o módulo principal do aplicativo NestJS, que importa o módulos
+//configura o ambiente a partir de um arquivo .env e estabelece uma conexão com um banco de dados Postgres
+//configura o TypeOrm para executar automaticamente as migrações na inicialização

@@ -29,3 +29,6 @@ export class UserService {
         return this.userRepository.find();
     }
 }
+
+//define um serviço no NestJS chamado UserService, que tem duas funções principais: createUser e getAllUser.
+//esse serviço cria um novo usuário com senha criptografada e recupera todos os usuários do banco de dados
