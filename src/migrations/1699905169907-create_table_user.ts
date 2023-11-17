@@ -1,8 +1,10 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
 
 export class CreateTableUser1699905169907 implements MigrationInterface {
-//O queryRunner permite executar transações no banco de dados, enquanto a função query permite executar consultas SQL.
+//O queryRunner permite executar transações/MUDANÇAS no banco de dados, 
+//enquanto a função query permite executar consultas SQL.
     public async up(queryRunner: QueryRunner): Promise<void> {
+        //Aguarde o queryRunner executar uma consulta com o seguinte conteúdo:
         await queryRunner.query(` 
         CREATE TABLE public.user (
             id integer NOT NULL,
