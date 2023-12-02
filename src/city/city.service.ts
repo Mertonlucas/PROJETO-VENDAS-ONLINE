@@ -10,7 +10,7 @@ export class CityService {
         @InjectRepository(CityEntity)
         private readonly cityRepository: Repository<CityEntity>,
     ) {}
-    async getAllCitiesByStateId(stateId: number): promise <CityEntity[]> {
+    async getAllCitiesByStateId(stateId: number): Promise<CityEntity[]> {
       return this.cityRepository.find({
         where:{
             stateId,
