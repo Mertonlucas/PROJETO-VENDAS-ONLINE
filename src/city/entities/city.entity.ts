@@ -10,7 +10,7 @@ import {
 export class CityEntity {
   @PrimaryGeneratedColumn('rowid')
   id: number;
-
+ 
   @Column({ name: 'state_id', nullable: false })
   stateId: number;
 

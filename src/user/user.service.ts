@@ -5,12 +5,14 @@ import { UserEntity } from './entities/user.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm'; 
 
+//Injetando classe PROVEDORA ou seja, se eu quiser utilizar UserService em outro serviço basta eu marca-lo com @Injectable
+// Assim, eu posso usar os métodos do UserService no outro serviço. 
 @Injectable()
-export class UserService {
-    constructor(
-        @InjectRepository(UserEntity)
-        private readonly userRepository: Repository<UserEntity>,
-    ) {}
+                export class UserService {
+                    constructor(
+                        @InjectRepository(UserEntity)
+                        private readonly userRepository: Repository<UserEntity>,
+                    ) {}
 
     async createUser(createUserDto: CreateUserDto): Promise<UserEntity> {
         const saltOrRounds = 10;
