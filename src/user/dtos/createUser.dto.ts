@@ -1,7 +1,7 @@
-import { IsString } from "class-validator";
+import { IsString } from 'class-validator';
 
 export class CreateUserDto {
-  @IsString ()
+  @IsString()
   name: string;
 
   @IsString()
@@ -12,29 +12,11 @@ export class CreateUserDto {
 
   @IsString()
   cpf: string;
-  
+
   @IsString()
   password: string;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// define uma interface em TypeScript chamada `CreateUserDto`. A interface especifica que um 
-// objeto do tipo `CreateUserDto` deve ter as propriedades `name`, `email`, `phone`, `cpf` e `password`, 
+// define uma interface em TypeScript chamada `CreateUserDto`. A interface especifica que um
+// objeto do tipo `CreateUserDto` deve ter as propriedades `name`, `email`, `phone`, `cpf` e `password`,
 // todas do tipo `string`.
