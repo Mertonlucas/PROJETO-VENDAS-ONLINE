@@ -37,8 +37,6 @@ export class AddressEntity {
 
 
 
-
-
 // essa classe AddressEntity é um modelo que MAPEIA a estrutura da 
 // tabela address no banco de dados para o código TypeScript. Isso permite que 
 // você interaja com a tabela address através de objetos AddressEntity em seu código.
