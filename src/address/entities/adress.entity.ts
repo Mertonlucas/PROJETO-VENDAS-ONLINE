@@ -9,34 +9,30 @@ import {
 @Entity({ name: 'address' })
 export class AddressEntity {
   @PrimaryGeneratedColumn('rowid')
-    id: number;
+  id: number;
 
   @Column({ name: 'user_id', nullable: false })
-    userId: number;
+  userId: number;
 
   @Column({ name: 'complement', nullable: true })
-    complement: string;
+  complement: string;
 
   @Column({ name: 'number', nullable: false })
-    numberAddress: number;
+  numberAddress: number;
 
   @Column({ name: 'cep', nullable: false })
-    cep: string;
+  cep: string;
 
   @Column({ name: 'city_id', nullable: false })
-    cityId: number;
+  cityId: number;
 
   @CreateDateColumn({ name: 'created_at' })
-    createdAt: Date;
+  createdAt: Date;
 
   @UpdateDateColumn({ name: 'updated_at' })
-   updatedAt: Date;
+  updatedAt: Date;
 }
 
-
-
-
-
-// essa classe AddressEntity é um modelo que MAPEIA a estrutura da 
-// tabela address no banco de dados para o código TypeScript. Isso permite que 
+// essa classe AddressEntity é um modelo que MAPEIA a estrutura da
+// tabela address no banco de dados para o código TypeScript. Isso permite que
 // você interaja com a tabela address através de objetos AddressEntity em seu código.
