@@ -28,7 +28,6 @@ export class UserController {
     );
   }
 }
-
 // define um controlador do NestJS chamado UserController, que usa o UserService para lidar com as requisições
 // relacionadas aos usuários. O controlador tem dois métodos:
 // createUser(@Body() createUser: CreateUserDto): Esse método recebe um objeto createUser do tipo CreateUserDto
