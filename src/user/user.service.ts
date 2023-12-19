@@ -4,7 +4,6 @@ import { hash } from 'bcrypt';
 import { UserEntity } from './entities/user.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
-import { promises } from 'dns';
 
 //Injetando classe PROVEDORA ou seja, se eu quiser utilizar UserService em outro serviço basta eu marca-lo com @Injectable
 // Assim, eu posso usar os métodos do UserService no outro serviço.
@@ -31,7 +30,7 @@ export class UserService {
     return this.userRepository.find();
   }
 
-  async getUserById(userId: number): Promise<UserEntity> {
+  async findUserById(userId: number): Promise<UserEntity> {
     const user = await this.userRepository.findOne({
       where: {
         id: userId,
