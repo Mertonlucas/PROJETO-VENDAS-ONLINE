@@ -1,7 +1,7 @@
-// O algoritmo em questão é uma função chamada "getAllCitiesByStateId". Ela busca todas as 
+// O algoritmo em questão é uma função chamada "getAllCitiesByStateId". Ela busca todas as
 // cidades associadas a um estado específico no banco de dados através do cache que ajuda no desempenho do sistema.
 
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CityEntity } from './entities/city.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -22,8 +22,19 @@ export class CityService {
         where: {
           stateId,
         },
-      })
+      }),
     );
   }
+  async findCityById(cityId: number): Promise<CityEntity> {
+    const city = await this.cityRepository.findOne({
+      where: {
+        id: cityId,
+      },
+    });
+
+    if (!city) {
+      throw new NotFoundException(`CityId: ${cityId} not found.`);
+    }
+    return city;
+  }
 }
- 
