@@ -14,10 +14,9 @@ export class CityController {
     }
 }
 
-
 // no contexto do Nest.js (ou de muitos outros frameworks MVC), as solicitações do cliente 
-// passam primeiro pelos controllers. O controller atua como um intermediário entre as solicitações HTTP do cliente 
-// e a lógica de negócios do aplicativo.
+// passam primeiro pelos controllers. O controller atua como um intermediário 
+//entre as solicitações HTTP do cliente e a lógica de negócios do aplicativo.
 // Quando o cliente faz uma solicitação relacionada à entidade "city", e;
 // ssa solicitação é roteada para o controller correspondente. O controller processa a solicitação, 
 // interage com os serviços apropriados (por exemplo, serviços que lidam com a lógica de negócios relacionada 
